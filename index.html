@@ -36,6 +36,12 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+   <!-- video style -->
+   <link href="css/video.css" rel="stylesheet" />
+
+   <!-- searchbar style -->
+   <link href="css/searchbar.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -71,14 +77,20 @@
                 <a class="nav-link" href="#info">Contact Us</a>
               </li>
             </ul>
+          
             <div class="quote_btn-container">
-              <form class="form-inline">
-                <button class="btn   nav_search-btn" type="submit">
+              <button class="btn nav_search-btn" type="button" id="searchToggleBtn">
                   <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+              </button>
+              <form class="form-inline" id="searchForm" onsubmit="performSearch(event)" style="display: none;">
+                  <input type="text" id="searchQuery" class="form-control" placeholder="Search...">
+                  <!--<button class="btn nav_search-btn" type="submit">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>-->
               </form>
+          </div>
+          
 
-            </div>
           </div>
         </nav>
       </div>
@@ -134,7 +146,7 @@
                       <a href="#about" class="btn-1">
                         Read More
                       </a>
-                      <a href="" class="btn-2">
+                      <a href="#info" class="btn-2">
                         Contact Us
                       </a>
                     </div>
@@ -216,7 +228,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s1.png" alt="">
+              <img src="images/temp.png" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -248,7 +260,7 @@
         <div class="col-md-6 col-lg-4 ">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s3.png" alt="">
+              <img src="images/monitor.png" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -264,7 +276,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s4.png" alt="">
+              <img src="images/alert.png" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -328,7 +340,9 @@
               </h2>
             </div>
             <p>
-              We provide a smart, efficient, and secure way to store and manage your seeds. Our cutting-edge technology enables precise control over environmental conditions, ensuring the longevity and viability of stored seeds. </p>
+              Welcome to Seed Vault, the premier solution for smart seed and germplasm storage. We are dedicated to revolutionizing the way seeds are stored and managed, ensuring their longevity and viability for future generations. Our mission is to provide a smart, efficient, and secure way to store and manage your seeds, utilizing cutting-edge technology to maintain optimal environmental conditions.
+
+              <br>At Seed Vault, we understand the critical importance of preserving genetic resources. Seeds are the foundation of our food systems, biodiversity, and agricultural sustainability. Our advanced storage solutions are designed to mimic natural seed storage conditions, offering precise control over temperature, humidity, and other environmental factors. This ensures that the seeds remain viable and healthy, ready to germinate when needed. </p>
           </div>
         </div>
         <div class="col-md-6 ">
@@ -346,34 +360,44 @@
 
   <!-- solution section -->
 
-  <section class="server_section">
-    <div class="container ">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/ce6b9f61.jpg" alt="">
-            <div class="play_btn">
-              <button>
-                <i class="fa fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
+
+<section class="server_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="img-box">
+          <video id="video1" src="videos/video1.mp4" alt=""></video>
+          <div class="play_btn">
+            <button onclick="playVideo('video1')">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                Let us manage your harvest
-              </h2>
-              <p>
-                Seed Vault is your ultimate solution for smart seed and germplasm storage. Our cutting-edge technology ensures the preservation and accessibility of genetic resources for future generations. Join us in our mission to revolutionize seed storage with innovative, sustainable solutions.
-              </p>
-            </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            <h2>Let us manage your harvest</h2>
+            <p>
+              Seed Vault is your ultimate solution for smart seed and germplasm storage. Our cutting-edge technology ensures the preservation and accessibility of genetic resources for future generations. Join us in our mission to revolutionize seed storage with innovative, sustainable solutions.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  function playVideo(videoId) {
+    const video = document.getElementById(videoId);
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+</script>
 
   <!-- end solution section -->
 
@@ -458,18 +482,18 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <img src="images/bb36430b.jpg" alt="Team Member 1">
+            <a href="https://www.instagram.com/?hl=en"><img src="images/bb36430b.jpg" alt="Team Member 1"></a>
           </div>
           <div class="detail-box">
             <h5>Fidelity Kathure</h5>
-            <h6>Database Developer</h6>
+            <h6>Backend Developer</h6>
           </div>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <img src="images/21679bbc.jpg" alt="Team Member 2">
+            <a href="https://www.linkedin.com/in/daniel-wekesa-1137a6266/"><img src="images/21679bbc.jpg" alt="Team Member 2"></a>
           </div>
           <div class="detail-box">
             <h5>Daniel Wekesa</h5>
@@ -480,18 +504,18 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <img src="images/4e842da3.jpg" alt="Team Member 3">
+            <a href="https://www.upwork.com/nx/find-work/best-matches"><img src="images/4e842da3.jpg" alt="Team Member 3"></a>
           </div>
           <div class="detail-box">
             <h5>Arnold Mcharia</h5>
-            <h6>Database Developer</h6>
+            <h6>Backend Developer</h6>
           </div>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <img src="images/45031688.jpg" alt="Team Member 4">
+            <a href="https://www.linkedin.com/in/stephen-njoroge-4492a9311/"><img src="images/45031688.jpg" alt="Team Member 4"></a>
           </div>
           <div class="detail-box">
             <h5>Stephen Kariuki</h5>
@@ -502,7 +526,7 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <img src="images/58b6f6ba.jpg" alt="Team Member 5">
+            <a href="https://www.linkedin.com/in/antony-omondi-a1b943272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="images/58b6f6ba.jpg" alt="Team Member 5"></a>
           </div>
           <div class="detail-box">
             <h5>Antony Omondi</h5>
@@ -513,7 +537,7 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <img src="images/9f108dda.jpg" alt="Team Member 6">
+            <!--TODO:--><a href=""><img src="images/9f108dda.jpg" alt="Team Member 6"></a>
           </div>
           <div class="detail-box">
             <h5>Derrick Omondi</h5>
@@ -524,10 +548,10 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <img src="images/b37e6681.jpg" alt="Team Member 7">
+            <a href="https://www.linkedin.com/in/samuel-mutunga-034b7a1b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="images/b37e6681.jpg" alt="Team Member 7"></a>
           </div>
           <div class="detail-box">
-            <h5>Samuel Mutunga</h5>
+            <h5>Samuel Mutunga</h5></a>
             <h6>Frontend Developer</h6>
           </div>
         </div>
@@ -550,39 +574,39 @@
             Address
           </h4>
           <div class="contact_link_box">
-            <a href="">
+            <a href="#info">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               <span>
                 Juja
               </span>
             </a>
-            <a href="">
+            <a href="#info">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Call 0746681360
+                Call 0742748537
               </span>
             </a>
-            <a href="">
+            <a href="#info">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-                seedvault@gmail.com
+                danielwekesakakai@gmail.com
               </span>
             </a>
           </div>
         </div>
         <div class="info_social">
-          <a href="https://www.facebook.com">
+          <!--<a href="https://www.facebook.com">
             <i class="fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="https:www.twitter.com">
+          </a>-->
+          <a href="https:www.twitter.com/chief_antonio">
             <i class="fa fa-twitter" aria-hidden="true"></i>
           </a>
-          <a href="https://www.linkedin.com">
+          <a href="https://www.linkedin.com/in/stephen-njoroge-4492a9311/">
             <i class="fa fa-linkedin" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com">
+          <!--<a href="https://www.instagram.com/__undecided.teen/">
             <i class="fa fa-instagram" aria-hidden="true"></i>
-          </a>
+          </a>-->
         </div>
       </div>
       <div class="col-md-3">
@@ -620,20 +644,9 @@
             Info
           </h4>
           <p>
-            Our team comprises experts in agriculture, technology, and environmental science. We work collaboratively to develop innovative solutions that address the challenges of seed preservation.
+            Our team comprises upcoming experts in technology. We work collaboratively to develop innovative solutions that address the challenges of seed preservation.
           </p>
         </div>
-      </div>
-      <div class="col-md-3 mb-0">
-        <h4>
-          Subscribe
-        </h4>
-        <form action="#">
-          <input type="text" placeholder="Enter email" />
-          <button type="submit">
-            Subscribe
-          </button>
-        </form>
       </div>
     </div>
   </div>
@@ -645,7 +658,7 @@
   <footer class="footer_section">
     <div class="container">
       <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved
+        <!--&copy; <span id="displayYear"></span> All Rights Reserved-->
       </p>
     </div>
   </footer>
@@ -657,6 +670,9 @@
   <script src="js/bootstrap.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+
+  <!-- searchbar js -->
+  <script src="js/searchbar.js"></script>
 
 
 </body>
