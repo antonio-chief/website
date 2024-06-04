@@ -39,6 +39,9 @@
    <!-- video style -->
    <link href="css/video.css" rel="stylesheet" />
 
+   <!-- searchbar style -->
+   <link href="css/searchbar.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -74,14 +77,20 @@
                 <a class="nav-link" href="#info">Contact Us</a>
               </li>
             </ul>
+          
             <div class="quote_btn-container">
-              <form class="form-inline">
-                <button class="btn   nav_search-btn" type="submit">
+              <button class="btn nav_search-btn" type="button" id="searchToggleBtn">
                   <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+              </button>
+              <form class="form-inline" id="searchForm" onsubmit="performSearch(event)" style="display: none;">
+                  <input type="text" id="searchQuery" class="form-control" placeholder="Search...">
+                  <!--<button class="btn nav_search-btn" type="submit">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>-->
               </form>
+          </div>
+          
 
-            </div>
           </div>
         </nav>
       </div>
@@ -672,6 +681,9 @@
   <script src="js/bootstrap.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+
+  <!-- searchbar js -->
+  <script src="js/searchbar.js"></script>
 
 
 </body>
