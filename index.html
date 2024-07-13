@@ -51,7 +51,7 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="website.html">
             <span>Seed vault</span>
           </a>
 
@@ -76,6 +76,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="#info">Contact Us</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+            </li>
             </ul>
           
             <div class="quote_btn-container">
@@ -212,6 +218,60 @@
     </section>
     <!-- end slider section -->
   </div>
+
+  <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form id="loginForm">
+                  <div class="form-group">
+                      <label for="loginEmail">Email address</label>
+                      <input type="email" class="form-control" id="loginEmail" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="loginPassword">Password</label>
+                      <input type="password" class="form-control" id="loginPassword" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form id="signupForm">
+                  <div class="form-group">
+                      <label for="signupEmail">Email address</label>
+                      <input type="email" class="form-control" id="signupEmail" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="signupPassword">Password</label>
+                      <input type="password" class="form-control" id="signupPassword" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Sign Up</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
 
   <!-- service section -->
 
@@ -482,18 +542,7 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <a href="https://www.instagram.com/?hl=en"><img src="images/bb36430b.jpg" alt="Team Member 1"></a>
-          </div>
-          <div class="detail-box">
-            <h5>Fidelity Kathure</h5>
-            <h6>Backend Developer</h6>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="team_member">
-          <div class="img-box">
-            <a href="https://www.linkedin.com/in/daniel-wekesa-1137a6266/"><img src="images/21679bbc.jpg" alt="Team Member 2"></a>
+            <a href="https://www.linkedin.com/in/daniel-wekesa-1137a6266/"><img src="images/21679bbc.jpg" alt="Team Member 1"></a>
           </div>
           <div class="detail-box">
             <h5>Daniel Wekesa</h5>
@@ -504,7 +553,7 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <a href="https://www.upwork.com/nx/find-work/best-matches"><img src="images/4e842da3.jpg" alt="Team Member 3"></a>
+            <a href="https://www.upwork.com/nx/find-work/best-matches"><img src="images/4e842da3.jpg" alt="Team Member 2"></a>
           </div>
           <div class="detail-box">
             <h5>Arnold Mcharia</h5>
@@ -515,7 +564,7 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <a href="https://www.linkedin.com/in/stephen-njoroge-4492a9311/"><img src="images/45031688.jpg" alt="Team Member 4"></a>
+            <a href="https://www.linkedin.com/in/stephen-njoroge-4492a9311/"><img src="images/45031688.jpg" alt="Team Member 3"></a>
           </div>
           <div class="detail-box">
             <h5>Stephen Kariuki</h5>
@@ -526,29 +575,18 @@
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <a href="https://www.linkedin.com/in/antony-omondi-a1b943272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="images/58b6f6ba.jpg" alt="Team Member 5"></a>
+            <a href="https://www.linkedin.com/in/antony-omondi-a1b943272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="images/58b6f6ba.jpg" alt="Team Member 4"></a>
           </div>
           <div class="detail-box">
             <h5>Antony Omondi</h5>
-            <h6>UI/UX Developer</h6>
+            <h6>UI/UX Designer</h6>
           </div>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="team_member">
           <div class="img-box">
-            <a href="https://www.linkedin.com/in/derrick-omondi-8a4920311"><img src="images/9f108dda.jpg" alt="Team Member 6"></a>
-          </div>
-          <div class="detail-box">
-            <h5>Derrick Omondi</h5>
-            <h6>Frontend Developer</h6>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="team_member">
-          <div class="img-box">
-            <a href="https://www.linkedin.com/in/samuel-mutunga-034b7a1b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="images/b37e6681.jpg" alt="Team Member 7"></a>
+            <a href="https://www.linkedin.com/in/samuel-mutunga-034b7a1b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="images/profile.photo.jpeg" alt="Team Member 5"></a>
           </div>
           <div class="detail-box">
             <h5>Samuel Mutunga</h5></a>
@@ -615,7 +653,7 @@
             Links
           </h4>
           <div class="info_links">
-            <a class="" href="index.html">
+            <a class="" href="website.html">
               <img src="images/nav-bullet.png" alt="">
               Home
             </a>
@@ -674,6 +712,30 @@
   <!-- searchbar js -->
   <script src="js/searchbar.js"></script>
 
+  <!-- Login and Signup handling script -->
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      // Simulate login validation (replace with actual validation)
+      if (email === 'seedvault@gmail.com' && password === 'password') {
+          const loginUrl = 'webapp.html';
+          window.open(loginUrl, '_blank');
+      } else {
+          alert('Invalid login credentials');
+      }
+  });
+
+  document.getElementById('signupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('signupEmail').value;
+      const password = document.getElementById('signupPassword').value;
+      // Simulate signup process (replace with actual signup)
+      alert('Sign up successful for ' + email);
+      $('#signupModal').modal('hide');
+  });
+</script>
 
 </body>
 
